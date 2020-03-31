@@ -14,7 +14,7 @@ class App extends Component {
 
     addToList = (tag, amount) => {
         var transaction = { tag: tag, amount: amount };
-        var transactionList = [...this.state.transactionList];
+        var transactionList = this.state.transactionList;
         transactionList.push(transaction);
         this.setState({ transactionList: transactionList });
         console.log(this.state.transactionList);
@@ -28,7 +28,7 @@ class App extends Component {
                     <Balance balance={this.state.balance} />
                     <IncomeExpenses />
                     <TransactionList />
-                    <AddTransaction />
+                    <AddTransaction add={this.addToList} />
                 </div>
             </React.Fragment>
         );

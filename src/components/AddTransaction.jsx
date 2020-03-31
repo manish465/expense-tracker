@@ -1,10 +1,17 @@
 import React from "react";
 
-const AddTransaction = () => {
+const AddTransaction = props => {
+    var tag = "manish";
+    var amount = 788;
+
+    const handelSubmit = event => {
+        event.preventDefault();
+    };
+
     return (
         <React.Fragment>
             <h3>Add New Transaction</h3>
-            <form>
+            <form onSubmit={handelSubmit}>
                 <div className="form-control">
                     <label htmlFor="text">Text</label>
                     <input type="text" placeholder="Enter text" />
@@ -15,7 +22,9 @@ const AddTransaction = () => {
                     </label>
                     <input type="number" placeholder="Enter Amount" />
                 </div>
-                <button className="btn">Add Transaction</button>
+                <button className="btn" onClick={() => props.add(tag, amount)}>
+                    Add Transaction
+                </button>
             </form>
         </React.Fragment>
     );
