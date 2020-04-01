@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AddTransaction = () => {
+    const [text, setText] = useState("");
+    const [amount, setAmount] = useState(0);
+
     return (
         <React.Fragment>
             <h3>Add New Transaction</h3>
