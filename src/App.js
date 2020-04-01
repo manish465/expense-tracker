@@ -6,9 +6,11 @@ import IncomeExpenses from "./components/IncomeExpenses";
 import TransactionList from "./components/TransactionList";
 import AddTransaction from "./components/AddTransaction";
 
+import { GlobalProvider } from "./context/GlobalState";
+
 const App = () => {
     return (
-        <React.Fragment>
+        <GlobalProvider>
             <Header />
             <div className="container">
                 <Balance />
@@ -16,7 +18,7 @@ const App = () => {
                 <TransactionList />
                 <AddTransaction />
             </div>
-        </React.Fragment>
+        </GlobalProvider>
     );
 };
 
