@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 const TransactionList = () => {
+    const context = useContext(GlobalContext);
+    console.log(context);
     return (
         <React.Fragment>
             <h3>History</h3>
