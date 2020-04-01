@@ -4,7 +4,7 @@ const Balance = () => {
     return (
         <React.Fragment>
             <h4>Your Balance</h4>
-            <h1 id="balance">$5000</h1>
+            <h1>$5000</h1>
         </React.Fragment>
     );
 };
