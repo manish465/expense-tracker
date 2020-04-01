@@ -10,13 +10,23 @@ const AddTransaction = () => {
             <form>
                 <div className="form-control">
                     <label htmlFor="text">Text</label>
-                    <input type="text" placeholder="Enter text" />
+                    <input
+                        type="text"
+                        value={text}
+                        onChange={event => setText(event.target.value)}
+                        placeholder="Enter text"
+                    />
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount">
                         Amount <br />
                     </label>
-                    <input type="number" placeholder="Enter Amount" />
+                    <input
+                        type="number"
+                        value={amount}
+                        onChange={event => setAmount(event.target.value)}
+                        placeholder="Enter Amount"
+                    />
                 </div>
                 <button className="btn">Add Transaction</button>
             </form>
