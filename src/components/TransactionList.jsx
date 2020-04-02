@@ -4,7 +4,6 @@ import Transaction from "./Transaction";
 
 const TransactionList = () => {
     const { tranactions } = useContext(GlobalContext);
-    console.log(tranactions);
     return (
         <React.Fragment>
             <h3>History</h3>
