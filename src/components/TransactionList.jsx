@@ -3,12 +3,12 @@ import { GlobalContext } from "../context/GlobalState";
 import Transaction from "./Transaction";
 
 const TransactionList = () => {
-    const { tranactions } = useContext(GlobalContext);
+    const { transactions } = useContext(GlobalContext);
     return (
         <React.Fragment>
             <h3>History</h3>
             <ul className="list">
-                {tranactions.map(transaction => (
+                {transactions.map(transaction => (
                     <Transaction
                         key={transaction.id}
                         transaction={transaction}
